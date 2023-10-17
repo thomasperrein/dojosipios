@@ -58,12 +58,6 @@ export const CalculatorModal: React.FC<Props> = (props: Props) => {
           <CloseIcon />
         </IconButton>
       </div>
-      <div className={classes.buttonContainer}>
-        <Button variant="contained" onClick={handleReset}>
-          Reset
-        </Button>
-        <Button variant="contained">{result} Kcal</Button>
-      </div>
       <DialogContent>
         <div className={classes.mainFoodItems}>
           {FOOD_ITEMS.map((item: FoodItem) => (
@@ -78,8 +72,11 @@ export const CalculatorModal: React.FC<Props> = (props: Props) => {
           ))}
         </div>
         <div className={classes.buttonContainer}>
-          <Button variant="contained">{result} Kcal</Button>
-        </div>
+        <Button variant="contained" onClick={handleReset}>
+          Reset
+        </Button>
+        <Button variant="contained">{result} Kcal</Button>
+      </div>
       </DialogContent>
     </Dialog>
   );
