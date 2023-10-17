@@ -43,6 +43,10 @@ export const CalculatorModal: React.FC<Props> = (props: Props) => {
     });
   };
 
+  const handleReset = () => {
+    setValues({});
+  };
+
   const result = Object.keys(values).reduce((acc: number, itemName: string) => {
     return acc + values[itemName].kcal;
   }, 0);
@@ -53,6 +57,12 @@ export const CalculatorModal: React.FC<Props> = (props: Props) => {
         <IconButton aria-label="close" onClick={onClose}>
           <CloseIcon />
         </IconButton>
+      </div>
+      <div className={classes.buttonContainer}>
+        <Button variant="contained" onClick={handleReset}>
+          Reset
+        </Button>
+        <Button variant="contained">{result} Kcal</Button>
       </div>
       <DialogContent>
         <div className={classes.mainFoodItems}>
