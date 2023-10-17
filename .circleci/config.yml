@@ -3,9 +3,12 @@ jobs:
   build-test:
     docker:
       # specify the version you desire here
-      - image: circleci/node:14
+      - image: circleci/node:18
 
     steps:
+      - add_ssh_keys:
+        fingerprints:
+        - "SHA256:uGwnHTKnDGaLb6VEzotneKdRXd0yf15KNUVnnuGP9O8"
       - checkout
 
       # Download and cache dependencies
