@@ -6,9 +6,6 @@ jobs:
       - image: circleci/node:18
 
     steps:
-      - add_ssh_keys:
-        fingerprints:
-        - "SHA256:uGwnHTKnDGaLb6VEzotneKdRXd0yf15KNUVnnuGP9O8"
       - checkout
 
       # Download and cache dependencies
