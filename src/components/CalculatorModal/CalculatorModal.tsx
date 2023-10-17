@@ -72,6 +72,9 @@ export const CalculatorModal: React.FC<Props> = (props: Props) => {
           ))}
         </div>
         <div className={classes.buttonContainer}>
+          <Button variant="contained">{result} Kcal</Button>
+        </div>
+        <div className={classes.buttonContainer}>
         <Button variant="contained" onClick={handleReset}>
           Reset
         </Button>
